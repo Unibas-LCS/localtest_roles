@@ -1,0 +1,19 @@
+---
+dmi_cleanup:
+  execute: 'false '
+  until: 2024-12-31
+  comment: some arbitrary string
+  private: "{{ lccms.manage }}"
+  complex:
+    one: 1
+    two: ['first', 'second', 'third']
+    three:
+       ok: 1
+       nope:
+         perhaps: 0
+         definitive: true
+       oversized: "This is a very long text which should be shown in its full length."
+  text: |
+    This is just a block of nl separated text:
+    The quick brown fox jumps over the lazy dog.
+    And to round it up, one last line <äöü>.

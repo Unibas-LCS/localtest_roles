@@ -1,0 +1,19 @@
+---
+parameters:
+  dmi_cleanup:
+    execute:
+      type: checkbox
+      options:
+       - {label: 'Yes', value: 'true '}
+       - {label: 'No' , value: 'false '}
+      description: Whether or not this should be run.
+    until:
+      type: date
+      description: up to which date this will be executed.
+    text:
+      type: text
+      description: some input text.
+    comment:
+      type: string
+      cols: 64
+      description: any arbitrary text.

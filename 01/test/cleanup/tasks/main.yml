@@ -1,0 +1,17 @@
+---
+- name: "Clean up any dirty objects from no longer used configurations."
+  debug:
+    msg: "nothing to do!"
+  when: its_cleanup.execute
+
+- name: "Check system state. (Ignore error)."
+  command: 'systemctl is-system-running'
+  changed_when: false
+  failed_when: false
+  register: 'systemd_state'
+
+- name: "Report bad system state. (Ignore error)"
+  fail:
+    msg: "systemctl reports state {{ systemd_state.stdout }}. Please check"
+  when: 'systemd_state.rc != 0'
+  ignore_errors: yes
