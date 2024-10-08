@@ -1,6 +1,6 @@
 ---
 parameters:
-  dmi_cleanup:
+  test_cleanup:
     execute:
       type: checkbox
       options:

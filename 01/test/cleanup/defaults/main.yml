@@ -1,5 +1,5 @@
 ---
-dmi_cleanup:
+test_cleanup:
   execute: 'false '
   until: 2024-12-31
   comment: some arbitrary string
