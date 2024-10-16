@@ -1,1 +1,5 @@
 ---
+test_list:
+  thelist:
+    - roledefault1
+    - roledefault2

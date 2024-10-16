@@ -1,3 +1,7 @@
 ---
 parameters:
-
+  test_list:
+    thelist:
+      type: list
+      label: List
+      rows: 10
